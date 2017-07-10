@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Complex Function</title>
+  </head>
+  <body>
+    <p id="display"></p>
+
+    <script>
+    let a = [];
+    let b = Number(prompt('Enter first number'));
+    let c = Number(prompt('Enter second number'));
+
+    cFunc(b,c);
+
+    function cFunc(x,y)
+    {
+	     let z = x + y;
+        a.push(x);
+        a.push(y);
+
+        for(let i = 0; i < 20; i++)
+        {
+        	a.push(z);
+            x = y;
+            y = z;
+            z = x + y;
+        }
+    }
+
+    for(let j = 0; j < a.length; j++)
+    {
+      document.getElementById("display").innerHTML = a[j] + "";
+    	console.log(a[j]);
+    }
+
+</script>
+
+
+
+  </body>
+</html>
